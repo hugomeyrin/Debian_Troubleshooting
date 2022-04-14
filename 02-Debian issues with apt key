@@ -1,0 +1,22 @@
+
+
+Thanks!  This worked.
+
+ 
+
+For others that run into this problem:
+
+Use a .zip/.tar/.rar extractor to open the .deb file and find the "postinst" file. 
+
+
+Open in text editor and copy from "-----BEGIN PGP PUBLIC KEY BLOCK-----" to "-----END PGP PUBLIC KEY BLOCK-----" and save as "dropbox.asc"
+
+
+into the /usr/share/keyrings/ directory.  
+
+
+Edit "/etc/apt/sources.list.d/dropbox.list" to read "deb [arch=i386,amd64 signed-by=/usr/share/keyrings/dropbox.asc] http://linux.dropbox.com/debian sid main" 
+
+
+or whatever version of Debian you are using.  Run apt update.  It should not give you an error anymore.
+
