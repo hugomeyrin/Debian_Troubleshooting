@@ -1,0 +1,4 @@
+
+debian 11 gnome software
+
+sudo apt install gnome-packagekit
