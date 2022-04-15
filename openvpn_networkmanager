@@ -1,0 +1,7 @@
+
+Download the .deb paquage
+https://packages.debian.org/fr/sid/amd64/network-manager-openvpn-gnome/download
+install with gdebi (double click)
+Reboot
+import openvpn file into network manager 
+connected :)
