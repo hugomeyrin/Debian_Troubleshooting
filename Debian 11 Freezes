@@ -1,0 +1,12 @@
+I have been having the same issue sporadically with Debian 10 on a Lenovo system too old for any BIOS/UEFI update support. Based on https://wiki.debian.org/Microcode, I did the following for my system:
+
+sudo nano /etc/apt/sources.list
+Add contrib non-free to all deb and deb-src lines. For example: (replace them ) no ADD this is very important!!!! 
+deb http://security.debian.org/ stretch/updates main contrib non-free
+deb-src http://security.debian.org/ stretch/updates main contrib non-free
+sudo apt update
+sudo apt install intel-microcode Note: Use amd64-microcode instead if appropriate
+Reboot to activate the microcode update
+The microcode update will be applied only if the kernel or user-space utilities determine the update is required. The microcode package must remain installed for the microcode update to remain active.
+
+Share
