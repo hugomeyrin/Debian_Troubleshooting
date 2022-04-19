@@ -134,3 +134,7 @@ ok
 
 reboot
 
+solving this issue 
+pulseaudio[852]: Error opening PCM device front:1: Argument invalide
+
+
