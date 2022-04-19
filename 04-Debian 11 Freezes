@@ -10,3 +10,26 @@ Reboot to activate the microcode update
 The microcode update will be applied only if the kernel or user-space utilities determine the update is required. The microcode package must remain installed for the microcode update to remain active.
 
 Share
+
+
+
+
+
+
+
+19 aPRIL  2022 
+https://gitlab.gnome.org/GNOME/gnome-shell/-/issues/4751
+
+
+
+hat we can learn so far:
+
+It happens on both X11 and Wayland.
+It happens to multiple people. @cpoul and me are confirmed.
+It happens on Fedora and openSUSE, so it isn't distro specific.
+The audio error I was seeing in my logs is unrelated.
+So the error is now confirmed to be the code in this comment (or the function that incorrectly triggers it): #4764 (comment 1305790)
+
+It has existed since GNOME 40 back in April at least. Maybe earlier. I was running GNOME 40 and constantly getting this freeze. Two weeks ago I upgraded to 41 and yesterday to 41.1 without any improvement.
+
+If you can tell me how you made the trace that implicates a window in Android Studio then I will check which application triggers it on my system.
