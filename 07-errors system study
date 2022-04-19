@@ -1,0 +1,53 @@
+Material hardware errors 
+
+dmesg -lerr
+
+Je ne vais dans les logs que quand il y a un problème avéré
+#5
+Le 08/09/2018, à 00:13
+
+
+journalctl -p err
+
+19 AVRIL 2216:
+
+root@tuxadminworkstation:/home/hugo# journalctl -p err
+mar 25 12:31:30 tuxadminworkstation kernel: [Firmware Bug]: TSC_DEADLINE disabled due to Errata; please update microcode to version: 0x22 (or later)
+mar 25 12:31:30 tuxadminworkstation kernel: nouveau 0000:01:00.0: firmware: failed to load nvidia/gm204/acr/bl.bin (-2)
+mar 25 12:31:30 tuxadminworkstation kernel: firmware_class: See https://wiki.debian.org/Firmware for information about missing firmware
+mar 25 12:31:30 tuxadminworkstation kernel: nouveau 0000:01:00.0: bus: MMIO write of 800000b4 FAULT at 10eb14 [ IBUS ]
+mar 25 12:31:30 tuxadminworkstation kernel: DMAR: DRHD: handling fault status reg 2
+mar 25 12:31:30 tuxadminworkstation kernel: DMAR: [DMA Read] Request device [01:00.0] PASID ffffffff fault addr 0 [fault reason 06] PTE Read access is not set
+mar 25 12:31:30 tuxadminworkstation kernel: nouveau 0000:01:00.0: DRM: failed to create kernel channel, -22
+mar 25 12:31:30 tuxadminworkstation kernel: ACPI BIOS Error (bug): Could not resolve symbol [\_SB.PCI0.SAT0.SPT4._GTF.DSSP], AE_NOT_FOUND (20200925/psargs-330)
+mar 25 12:31:30 tuxadminworkstation kernel: ACPI Error: Aborting method \_SB.PCI0.SAT0.SPT4._GTF due to previous error (AE_NOT_FOUND) (20200925/psparse-529)
+mar 25 12:31:30 tuxadminworkstation kernel: ACPI BIOS Error (bug): Could not resolve symbol [\_SB.PCI0.SAT0.SPT5._GTF.DSSP], AE_NOT_FOUND (20200925/psargs-330)
+mar 25 12:31:30 tuxadminworkstation kernel: ACPI Error: Aborting method \_SB.PCI0.SAT0.SPT5._GTF due to previous error (AE_NOT_FOUND) (20200925/psparse-529)
+mar 25 12:31:30 tuxadminworkstation kernel: ACPI BIOS Error (bug): Could not resolve symbol [\_SB.PCI0.SAT0.SPT5._GTF.DSSP], AE_NOT_FOUND (20200925/psargs-330)
+mar 25 12:31:30 tuxadminworkstation kernel: ACPI Error: Aborting method \_SB.PCI0.SAT0.SPT5._GTF due to previous error (AE_NOT_FOUND) (20200925/psparse-529)
+mar 25 12:31:30 tuxadminworkstation kernel: ACPI BIOS Error (bug): Could not resolve symbol [\_SB.PCI0.SAT0.SPT4._GTF.DSSP], AE_NOT_FOUND (20200925/psargs-330)
+mar 25 12:31:30 tuxadminworkstation kernel: ACPI Error: Aborting method \_SB.PCI0.SAT0.SPT4._GTF due to previous error (AE_NOT_FOUND) (20200925/psparse-529)
+mar 25 12:31:30 tuxadminworkstation kernel: uvcvideo: Failed to query (GET_INFO) UVC control 2 on unit 1: -32 (exp. 1).
+mar 25 12:31:36 tuxadminworkstation pipewire[744]: Failed to receive portal pid: org.freedesktop.DBus.Error.NameHasNoOwner: Could not get PID of name 'org.freedesktop>
+mar 25 12:31:38 tuxadminworkstation kernel: uvcvideo: Failed to query (GET_INFO) UVC control 2 on unit 1: -32 (exp. 1).
+mar 25 12:31:42 tuxadminworkstation kernel: uvcvideo: Failed to query (GET_INFO) UVC control 2 on unit 1: -32 (exp. 1).
+mar 25 12:31:59 tuxadminworkstation pipewire[849]: Failed to receive portal pid: org.freedesktop.DBus.Error.NameHasNoOwner: Could not get PID of name 'org.freedesktop>
+mar 25 12:39:08 tuxadminworkstation systemd[829]: Failed to start KDE Global Shortcuts Server.
+mar 25 12:39:09 tuxadminworkstation kernel: uvcvideo: Failed to query (GET_INFO) UVC control 2 on unit 1: -32 (exp. 1).
+mar 25 12:39:09 tuxadminworkstation systemd[829]: Failed to start KDE Global Shortcuts Server.
+mar 25 12:39:10 tuxadminworkstation systemd[829]: Failed to start KDE Global Shortcuts Server.
+mar 25 12:39:10 tuxadminworkstation systemd[829]: Failed to start KDE Global Shortcuts Server.
+mar 25 12:39:10 tuxadminworkstation kernel: uvcvideo: Failed to query (GET_INFO) UVC control 2 on unit 1: -32 (exp. 1).
+mar 25 12:39:10 tuxadminworkstation systemd[829]: Failed to start KDE Global Shortcuts Server.
+mar 25 12:39:10 tuxadminworkstation systemd[829]: Failed to start KDE Global Shortcuts Server.
+mar 25 12:39:11 tuxadminworkstation kernel: watchdog: watchdog0: watchdog did not stop!
+-- Boot 392ea86657c64be28030a44865b8d7a2 --
+mar 25 12:41:07 tuxadminworkstation kernel: [Firmware Bug]: TSC_DEADLINE disabled due to Errata; please update microcode to version: 0x22 (or later)
+mar 25 12:41:07 tuxadminworkstation kernel: nouveau 0000:01:00.0: firmware: failed to load nvidia/gm204/acr/bl.bin (-2)
+mar 25 12:41:07 tuxadminworkstation kernel: firmware_class: See https://wiki.debian.org/Firmware for information about missing firmware
+mar 25 12:41:07 tuxadminworkstation kernel: nouveau 0000:01:00.0: bus: MMIO write of 800000b4 FAULT at 10eb14 [ IBUS ]
+mar 25 12:41:07 tuxadminworkstation kernel: DMAR: DRHD: handling fault status reg 2
+mar 25 12:41:07 tuxadminworkstation kernel: DMAR: [DMA Read] Request device [01:00.0] PASID ffffffff fault addr 0 [fault reason 06] PTE Read access is not set
+mar 25 12:41:07 tuxadminworkstation kernel: nouveau 0000:01:00.0: DRM: failed to create kernel channel, -22
+lines 1-37
+
