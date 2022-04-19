@@ -138,3 +138,50 @@ solving this issue
 pulseaudio[852]: Error opening PCM device front:1: Argument invalide
 to test
 sudo apt install pavucontrol
+
+
+checking gnome 42 errors and maybe some libraries of js have issues 
+
+journalctl /usr/bin/gnome-shell
+
+Hint: You are currently not seeing messages from other users and the system.
+      Users in groups 'adm', 'systemd-journal' can see all messages.
+      Pass -q to turn off this notice.
+avr 15 00:13:52 tuxadminworkstation gnome-shell[1674]: Running GNOME Shell (using mutter 42.0) as a X11 window and compositing manager
+avr 15 00:13:52 tuxadminworkstation gnome-shell[1674]: ATK Bridge is disabled but a11y has already been enabled.
+avr 15 00:13:52 tuxadminworkstation gnome-shell[1674]: Unset XDG_SESSION_ID, getCurrentSessionProxy() called outside a user session. Asking logind directly.
+avr 15 00:13:52 tuxadminworkstation gnome-shell[1674]: Will monitor session 2
+avr 15 00:13:52 tuxadminworkstation gnome-shell[1674]: Telepathy is not available, chat integration will be disabled.
+avr 15 00:13:53 tuxadminworkstation gnome-shell[1674]: Unhandled promise rejection. To suppress this warning, add an error handler to your promise chain with .catch()>
+                                                         _loadFile@resource:///org/gnome/shell/ui/background.js:488:20
+                                                         _load@resource:///org/gnome/shell/ui/background.js:518:14
+                                                         _init@resource:///org/gnome/shell/ui/background.js:278:14
+                                                         Background@resource:///org/gnome/shell/ui/background.js:234:4
+                                                         getBackground@resource:///org/gnome/shell/ui/background.js:609:30
+                                                         _createBackgroundActor@resource:///org/gnome/shell/ui/background.js:780:49
+                                                         BackgroundManager@resource:///org/gnome/shell/ui/background.js:706:37
+                                                         _createBackgroundManager@resource:///org/gnome/shell/ui/layout.js:461:27
+                                                         _updateBackgrounds@resource:///org/gnome/shell/ui/layout.js:507:34
+                                                         _monitorsChanged@resource:///org/gnome/shell/ui/layout.js:571:14
+                                                         _init@resource:///org/gnome/shell/ui/layout.js:313:14
+                                                         LayoutManager@resource:///org/gnome/shell/ui/layout.js:194:4
+                                                         _initializeUI@resource:///org/gnome/shell/ui/main.js:200:21
+                                                         start@resource:///org/gnome/shell/ui/main.js:165:5
+                                                         @resource:///org/gnome/shell/ui/init.js:6:17
+avr 15 00:13:53 tuxadminworkstation gnome-shell[1674]: Unhandled promise rejection. To suppress this warning, add an error handler to your promise chain with .catch()>
+                                                         _loadFile@resource:///org/gnome/shell/ui/background.js:488:20
+                                                         _load@resource:///org/gnome/shell/ui/background.js:518:14
+                                                         _init@resource:///org/gnome/shell/ui/background.js:278:14
+                                                         Background@resource:///org/gnome/shell/ui/background.js:234:4
+                                                         getBackground@resource:///org/gnome/shell/ui/background.js:609:30
+                                                         _createBackgroundActor@resource:///org/gnome/shell/ui/background.js:780:49
+                                                         BackgroundManager@resource:///org/gnome/shell/ui/background.js:706:37
+                                                         _createBackgroundManager@resource:///org/gnome/shell/ui/layout.js:461:27
+                                                         _updateBackgrounds@resource:///org/gnome/shell/ui/layout.js:507:34
+                                                         _monitorsChanged@resource:///org/gnome/shell/ui/layout.js:571:14
+avr 15 00:13:53 tuxadminworkstation gnome-shell[1674]: Unhandled promise rejection. To suppress this warning, add an error handler to your promise chain with .catch()>
+                                                         _loadFile@resource:///org/gnome/shell/ui/background.js:488:20
+                                                         _load@resource:///org/gnome/shell/ui/background.js:518:14
+                                                         _init@resource:///org/gnome/shell/ui/background.js:278:14
+                                                         Background@resource:///org/gnome/shell/ui/background.js:234:4
+lines 1-37
