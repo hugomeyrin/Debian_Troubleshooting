@@ -185,3 +185,15 @@ avr 15 00:13:53 tuxadminworkstation gnome-shell[1674]: Unhandled promise rejecti
                                                          _init@resource:///org/gnome/shell/ui/background.js:278:14
                                                          Background@resource:///org/gnome/shell/ui/background.js:234:4
 lines 1-37
+
+
+j'ai remarque qui l y a des paquets sugères avant pour fwupd version 2 
+
+ gir1.2-fwupd-2.0 libsmbios-doc
+ 
+ 
+ sudo apt install  gir1.2-fwupd-2.0 libsmbios-doc
+
+
+pas installées de base 
+ 
